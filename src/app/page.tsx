@@ -9,6 +9,9 @@ import {
   ChevronRight,
   Globe,
   Palette,
+  Briefcase,
+  ExternalLink,
+  Key,
 } from "lucide-react";
 
 export default function Home() {
@@ -16,7 +19,6 @@ export default function Home() {
     "Front-End Development",
     "UI/UX Design",
     "Next.js",
-    "React Native",
     "TypeScript",
     "Supabase",
     "Figma",
@@ -86,6 +88,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- WORK EXPERIENCE SECTION --- */}
+      <section className="py-20 border-t border-border/40 bg-muted/5">
+        <div className="container mx-auto max-w-4xl px-6">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="p-3 bg-primary/10 rounded-2xl">
+              <Briefcase className="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                Career Path
+              </h2>
+              <p className="text-2xl font-bold">Work Experience</p>
+            </div>
+          </div>
+
+          {/* Timeline Wrapper */}
+          <div className="relative border-l border-primary/20 ml-6 pl-8 space-y-16">
+            
+            {/* EXPERIENCE 1: COMENTOR */}
+            <div className="relative">
+              {/* Dot Timeline */}
+              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-background border-4 border-primary shadow-sm" />
+              
+              <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                  <div>
+                    <h3 className="text-xl font-bold italic">UI/UX Designer & Product Management Intern</h3>
+                    <p className="text-primary font-medium">Comentor</p>
+                  </div>
+                  <Badge variant="secondary" className="w-fit text-[10px] font-bold">
+                    Jun 2025 - Sep 2025
+                  </Badge>
+                </div>
+                {/* Deskripsi dibiarkan draft sesuai permintaan */}
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl italic">
+                  (Deskripsi pengalaman kerja di Comentor belum final)
+                </p>
+              </div>
+            </div>
+
+            {/* EXPERIENCE 2: REAL-TIME POS SYSTEM */}
+            <div className="relative">
+              {/* Dot Timeline */}
+              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-background border-4 border-muted-foreground/30 shadow-sm" />
+              
+              <div className="space-y-4">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+                  <div>
+                    <h3 className="text-xl font-bold">Fullstack Developer (Project-Based)</h3>
+                    <p className="text-primary font-medium">Real-time POS System</p>
+                  </div>
+                  <Badge variant="outline" className="w-fit text-[10px] font-bold border-primary/30">
+                    2025 - Present
+                  </Badge>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+                  Membangun sistem kasir terintegrasi yang menangani manajemen inventaris, 
+                  laporan penjualan harian, dan sistem pembayaran digital untuk efisiensi operasional bisnis.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge className="bg-muted text-muted-foreground border-none text-[9px]">NEXT.JS</Badge>
+                  <Badge className="bg-muted text-muted-foreground border-none text-[9px]">SUPABASE</Badge>
+                  <Badge className="bg-muted text-muted-foreground border-none text-[9px]">MIDTRANS</Badge>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* --- SELECTED WORKS (ID: projects) --- */}
       <section
         id="projects"
@@ -137,25 +210,58 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
+
                 <div className="pt-8 md:pt-12">
-                  <a
-                    href="https://github.com/rzkylatiif/pos-apps.git"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 text-xs md:text-sm font-bold group/btn transition-colors"
-                  >
-                    <div className="p-2 rounded-full border border-border group-hover/btn:border-primary transition-colors">
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="w-5 h-5 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                      </svg>
+                  <div className="flex flex-wrap gap-6 mb-6">
+                    {/* Tautan Live Demo*/}
+                    <a
+                      href="https://poscafe-nine.vercel.app/"
+                      target="_blank"
+                      className="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-primary group/link"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live Demo</span>
+                    </a>
+                    {/* Tautan GitHub */}
+                    <a
+                      href="https://github.com/rzkylatiif/pos-apps.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs md:text-sm font-bold text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <div className="p-1.5 rounded-full border border-border">
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="w-4 h-4 fill-current"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                      </div>
+                      <span>Source Code</span>
+                    </a>
+                  </div>
+
+                  {/* Kredensial Akun Test */}
+                  <div className="p-4 rounded-xl bg-muted/30 border border-border/50 space-y-2">
+                    <p className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground flex items-center gap-2">
+                      <Key className="w-3 h-3 text-primary" /> Akun Test Login
+                    </p>
+                    <div className="grid grid-cols-1 gap-1 text-[11px] font-mono">
+                      <p>
+                        <span className="text-muted-foreground">Email:</span>{" "}
+                        <span className="text-foreground select-all cursor-pointer">
+                          admin@gmail.com
+                        </span>
+                      </p>
+                      <p>
+                        <span className="text-muted-foreground">Pass :</span>{" "}
+                        <span className="text-foreground select-all cursor-pointer">
+                          test123
+                        </span>
+                      </p>
                     </div>
-                    <span>Explore Repository</span>
-                    <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,7 +322,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SKILLS TICKER (Teks Bergerak) --- */}
+      {/* --- SKILLS TICKER --- */}
       <section className="py-12 md:py-24 border-t border-b border-border/40 overflow-hidden bg-muted/5 relative">
         <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-background to-transparent z-10" />
         <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-background to-transparent z-10" />
@@ -257,10 +363,10 @@ export default function Home() {
             </a>
 
             <div className="flex gap-4 md:gap-6">
-              {/* GitHub Logo Asli */}
               <a
                 href="https://github.com/rzkylatiif"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="p-4 border border-border/60 rounded-full hover:bg-foreground hover:text-background hover:-translate-y-2 transition-all duration-300"
               >
                 <svg
@@ -271,10 +377,10 @@ export default function Home() {
                   <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </a>
-              {/* LinkedIn Logo Asli */}
               <a
                 href="https://www.linkedin.com/in/rzkylatif/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="p-4 border border-border/60 rounded-full hover:bg-[#0A66C2] hover:text-white hover:-translate-y-2 transition-all duration-300"
               >
                 <svg
@@ -285,7 +391,6 @@ export default function Home() {
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
-              {/* Email */}
               <a
                 href="mailto:rizkysaputralatief1093@gmail.com"
                 className="p-4 border border-border/60 rounded-full hover:bg-primary hover:text-primary-foreground hover:-translate-y-2 transition-all duration-300"
@@ -295,7 +400,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-[9px] md:text-[10px] uppercase font-bold tracking-[0.5em] md:tracking-[0.8em] text-muted-foreground pt-12 md:pt-20">
+          <p className="text-[9px] md:text-[12px] font-bold text-muted-foreground pt-12 md:pt-20">
             © 2026 Rizky Saputra Latief <br /> Built with Passion & Precision
           </p>
         </div>
