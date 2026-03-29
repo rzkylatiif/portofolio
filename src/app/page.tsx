@@ -74,7 +74,7 @@ export default function Home() {
                   Lihat Proyek <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
               </a>
-              <a href="/cv-rizky.pdf" download className="w-full sm:w-auto">
+              <a href="/rizky-cv.pdf" download className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
