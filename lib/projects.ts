@@ -7,6 +7,7 @@ export type Project = {
   demo: string;
   repo: string;
   domain: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -19,6 +20,7 @@ export const projects: Project[] = [
     demo: "https://www.niponsaranakonstruksi.co.id",
     repo: "https://github.com/rzkylatiif",
     domain: "niponsaranakonstruksi.co.id",
+    image: "/nipon.png",
   },
   {
     name: "Point of Sales Real-Time",

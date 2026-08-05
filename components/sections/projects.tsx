@@ -1,5 +1,6 @@
 import { GlassCard } from "@/components/shared/glass-card";
 import { projects } from "@/lib/projects";
+import Image from "next/image";
 
 export function Projects() {
   return (
@@ -17,8 +18,20 @@ export function Projects() {
         {projects.map((p) => (
           <GlassCard key={p.name} className="p-6 md:p-8">
             <div className="grid gap-7 md:grid-cols-2 md:items-center">
-              <div className="flex aspect-[16/10] items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-[#7c5cff]/25 to-[#22d3ee]/20 font-mono-app text-xs text-white/50">
-                {p.domain}
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10">
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#7c5cff]/25 to-[#22d3ee]/20 font-mono-app text-xs text-white/50">
+                    {p.domain}
+                  </div>
+                )}
               </div>
 
               <div>
