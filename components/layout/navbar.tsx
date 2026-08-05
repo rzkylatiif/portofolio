@@ -38,6 +38,10 @@ export function Navbar() {
       <nav className="glass fixed left-1/2 top-5 z-50 flex -translate-x-1/2 items-center gap-1.5 rounded-full py-1.5 pl-2.5 pr-2">
         <a
           href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="flex items-center gap-2 px-1 py-1 font-mono-app text-[0.82rem] font-medium transition-opacity hover:opacity-80"
         >
           <span className="relative flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-[#7c5cff] to-[#22d3ee] text-[0.62rem] font-bold text-white shadow-[0_2px_12px_rgba(124,92,255,0.55)]">
