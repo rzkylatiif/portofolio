@@ -1,3 +1,4 @@
+// components/layout/navbar.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -46,21 +47,23 @@ export function Navbar() {
           rzky.latif
         </a>
 
-        <span className="mx-0.5 h-[18px] w-px bg-white/15" />
+        <span className="mx-0.5 hidden h-[18px] w-px bg-white/15 sm:block" />
 
-        {links.map(({ id, label }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className={`rounded-full px-3.5 py-[7px] text-[0.85rem] transition-colors ${
-              active === id
-                ? "bg-white/[0.12] text-[var(--snow)]"
-                : "text-[var(--mist)] hover:bg-white/[0.08] hover:text-[var(--snow)]"
-            }`}
-          >
-            {label}
-          </a>
-        ))}
+        <div className="hidden items-center gap-1 sm:flex">
+          {links.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`rounded-full px-3.5 py-[7px] text-[0.85rem] transition-colors ${
+                active === id
+                  ? "bg-white/[0.12] text-[var(--snow)]"
+                  : "text-[var(--mist)] hover:bg-white/[0.08] hover:text-[var(--snow)]"
+              }`}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
       </nav>
     </>
   );

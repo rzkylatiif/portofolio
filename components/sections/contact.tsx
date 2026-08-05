@@ -1,3 +1,4 @@
+// components/sections/contact.tsx
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -8,9 +9,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
+const WA = "6282278263098"; // nomor WA kamu, format internasional tanpa +
+const EMAIL = "rizkysaputralatief1093@gmail.com";
+
 const schema = z.object({
   nama: z.string().min(2, "Nama minimal 2 huruf"),
-  email: z.string().email("Format email belum benar"),
   pesan: z.string().min(10, "Pesan minimal 10 huruf"),
 });
 
@@ -20,16 +23,16 @@ export function Contact() {
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   function onSubmit(data: FormData) {
-    const body = encodeURIComponent(
-      `${data.pesan}\n\n— ${data.nama} (${data.email})`,
+    const text = `Halo Rizky, saya ${data.nama}.\n\n${data.pesan}`;
+    window.open(
+      `https://wa.me/${WA}?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
     );
-    window.location.href = `mailto:rizkysaputralatief1093@gmail.com?subject=Halo dari portofolio&body=${body}`;
-    reset();
   }
 
   return (
@@ -42,8 +45,8 @@ export function Contact() {
           Mari ngobrol
         </h2>
         <p className="mt-4 max-w-md text-[var(--mist)]">
-          Sedang terbuka untuk peluang kerja maupun proyek freelance. Silakan
-          hubungi lewat form ini atau email langsung.
+          Sedang terbuka untuk peluang kerja maupun proyek freelance. Isi form
+          ini, nanti langsung diteruskan ke WhatsApp saya.
         </p>
 
         <form
@@ -60,15 +63,6 @@ export function Contact() {
           </div>
 
           <div>
-            <Input placeholder="Email" {...register("email")} />
-            {errors.email && (
-              <p className="mt-1.5 text-sm text-red-400">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-
-          <div>
             <Textarea placeholder="Pesan" rows={5} {...register("pesan")} />
             {errors.pesan && (
               <p className="mt-1.5 text-sm text-red-400">
@@ -80,18 +74,17 @@ export function Contact() {
           <div className="mt-2 flex flex-wrap items-center gap-3">
             <Button
               type="submit"
-              disabled={isSubmitting}
               className="rounded-full bg-[var(--snow)] px-6 text-[var(--ink)] hover:bg-white"
             >
-              Kirim pesan
+              Kirim via WhatsApp
             </Button>
             <a
-              href="https://github.com/rzkylatiif"
+              href={`https://mail.google.com/mail/?view=cm&to=${EMAIL}`}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-white/15 bg-white/[0.06] px-6 py-2 text-sm font-medium text-[var(--snow)] transition-colors hover:bg-white/[0.12]"
             >
-              GitHub
+              Email
             </a>
           </div>
         </form>
