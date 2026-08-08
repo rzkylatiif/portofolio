@@ -24,7 +24,7 @@ export function Hero() {
           Lihat proyek →
         </a>
         <a
-          href="/cv.pdf"
+          href="/cv-rizky.pdf"
           className="rounded-full border border-white/15 bg-white/[0.06] px-6 py-3 text-[0.95rem] font-medium text-[var(--snow)] backdrop-blur-md transition-all hover:-translate-y-0.5 hover:bg-white/[0.12]"
         >
           Unduh CV ↓
