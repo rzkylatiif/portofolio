@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <header className="relative flex min-h-dvh flex-col items-center justify-center px-6 pb-20 pt-32 text-center">
       <p className="font-mono-app text-[0.72rem] uppercase tracking-[0.22em] text-[var(--mist)]">
-        Junior Frontend &amp; Fullstack Developer · Tangerang Selatan
+        Junior Frontend &amp; Fullstack Developer
       </p>
 
       <h1 className="mt-6 bg-gradient-to-b from-white to-[#b8b8c0] bg-clip-text text-[clamp(2.6rem,8vw,6rem)] font-semibold leading-[1.02] tracking-[-0.035em] text-transparent">

@@ -28,14 +28,14 @@ export function Projects() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#7c5cff]/25 to-[#22d3ee]/20 font-mono-app text-xs text-white/50">
+                  <div className="flex h-full w-full items-center justify-center bg-white/[0.04] font-mono-app text-xs text-[var(--mist)]">
                     {p.domain}
                   </div>
                 )}
               </div>
 
               <div>
-                <span className="font-mono-app text-[0.68rem] uppercase tracking-[0.15em] text-[#a9a0ff]">
+                <span className="font-mono-app text-[0.68rem] uppercase tracking-[0.15em] text-[var(--mist)]">
                   {p.badge}
                 </span>
                 <h3 className="mb-2.5 mt-3 text-[1.5rem] font-semibold tracking-[-0.01em]">
@@ -80,7 +80,7 @@ export function Projects() {
         ))}
 
         <GlassCard className="p-8">
-          <span className="font-mono-app text-[0.68rem] uppercase tracking-[0.15em] text-[#a9a0ff]">
+          <span className="font-mono-app text-[0.68rem] uppercase tracking-[0.15em] text-[var(--mist)]">
             Personal
           </span>
           <h3 className="mb-2.5 mt-3 text-[1.5rem] font-semibold tracking-[-0.01em]">

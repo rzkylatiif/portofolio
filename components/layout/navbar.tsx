@@ -44,7 +44,7 @@ export function Navbar() {
           }}
           className="flex items-center gap-2 px-1 py-1 font-mono-app text-[0.82rem] font-medium transition-opacity hover:opacity-80"
         >
-          <span className="relative flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-[#7c5cff] to-[#22d3ee] text-[0.62rem] font-bold text-white shadow-[0_2px_12px_rgba(124,92,255,0.55)]">
+          <span className="relative flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-white to-[#9a9aa2] text-[0.62rem] font-bold text-[#0c0c0e] shadow-[0_2px_12px_rgba(255,255,255,0.15)]">
             RL
             <span className="absolute -right-0.5 -top-0.5 h-2 w-2 animate-pulse rounded-full border-2 border-[#060608] bg-[#30d158]" />
           </span>
